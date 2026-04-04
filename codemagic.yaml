@@ -1,13 +1,13 @@
 workflows:
   ios-build:
-    name: StockBarcodeReader iOS Build
+    name: ios_sql iOS Build
     environment:
       groups:
         - ios_signing
       vars:
-        XCODE_WORKSPACE: "stockbarcodereader.xcodeproj"
-        XCODE_SCHEME: "stockbarcodereader"
-        BUNDLE_ID: "com.ananapp.stockbarcodereader"
+        XCODE_WORKSPACE: "ios_sql.xcodeproj"
+        XCODE_SCHEME: "ios_sql"
+        BUNDLE_ID: "com.ananapp.ios_sql"
         APP_STORE_CONNECT_TEAM_ID: "YOUR_TEAM_ID_HERE"
     scripts:
       - name: Set up keychain

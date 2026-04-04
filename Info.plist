@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>CFBundleName</key>
-    <string>stockbarcodereader</string>
+    <string>ios_sql</string>
     <key>CFBundleIdentifier</key>
-    <string>com.ananapp.stockbarcodereader</string>
+    <string>com.ananapp.ios_sql</string>
     <key>NSCameraUsageDescription</key>
     <string>This app uses the camera to scan product barcodes.</string>
     <key>UIRequiredDeviceCapabilities</key>
