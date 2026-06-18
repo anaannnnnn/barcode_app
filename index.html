@@ -3,59 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Desire Group — building ambitious brands, products, and experiences that people love." />
-  <title>Desire Group</title>
+  <meta name="description" content="Desire Group — defining the future of desire. A multidisciplinary studio building ambitious brands, products, and experiences." />
+  <title>Desire Group — Defining the Future of Desire</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Hide hero elements only when Motion is about to drive them.
+    // Fallback timer reveals everything if Motion never loads (offline / blocked).
+    document.documentElement.classList.add("motion-ready");
+    window.__motionFallback = setTimeout(function () {
+      document.documentElement.classList.remove("motion-ready");
+    }, 2500);
+  </script>
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header" id="top">
-    <div class="container nav">
-      <a href="#top" class="brand" aria-label="Desire Group home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        Desire<span class="brand-accent">Group</span>
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <!-- Atmospheric background: fog + mossy cliff corners -->
+    <div class="hero-bg" aria-hidden="true">
+      <span class="cliff cliff-left"></span>
+      <span class="cliff cliff-right"></span>
+      <span class="fog"></span>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+      <a href="#top" class="brand anim" aria-label="Desire Group home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="30" height="30" fill="none">
+            <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M21 9v14M21 16c0-3.9-3.1-7-7-7s-7 3.1-7 7 3.1 7 7 7c1.9 0 3.6-.7 4.9-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-text">DESIRE<br />GROUP</span>
       </a>
 
-      <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <nav class="nav-pill anim" id="nav-links" aria-label="Primary">
         <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#work">Approach</a>
-        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        <a href="#services">Solutions</a>
+        <a href="#work">Insights</a>
+        <a href="#contact">Careers</a>
+        <a href="#contact" class="btn-sage">Get in Touch</a>
       </nav>
 
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <button class="nav-toggle anim" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-bg" aria-hidden="true">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
-      </div>
-      <div class="container hero-inner">
-        <p class="eyebrow reveal">Brand · Product · Growth</p>
-        <h1 class="hero-title reveal">
-          We build ambitious things<br /><span class="grad">people genuinely desire.</span>
-        </h1>
-        <p class="hero-sub reveal">
-          Desire Group is a multidisciplinary studio partnering with founders and
-          teams to design, build, and scale standout digital products and brands.
-        </p>
-        <div class="hero-cta reveal">
-          <a href="#contact" class="btn btn-primary">Start a project</a>
-          <a href="#services" class="btn btn-link">See what we do →</a>
+    <!-- Hero content -->
+    <div class="hero-inner">
+      <h1 class="hero-title anim">Defining the<br />future of desire</h1>
+
+      <div class="ring-stage anim" aria-hidden="true">
+        <div class="ring-tilt">
+          <div class="ring"></div>
+          <div class="ring-shadow"></div>
         </div>
       </div>
-    </section>
 
+      <a href="#about" class="scroll-cue anim" aria-label="Scroll down">
+        <span>SCROLL</span>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M12 4v15m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <main>
     <!-- Stats -->
     <section class="stats">
       <div class="container stats-grid">
@@ -87,12 +103,12 @@
       </div>
     </section>
 
-    <!-- Services -->
+    <!-- Solutions -->
     <section class="section section-alt" id="services">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">What we do</p>
-          <h2 class="section-title">Capabilities that move the needle.</h2>
+          <h2 class="section-title">Solutions that move the needle.</h2>
         </div>
         <div class="cards">
           <article class="card reveal">
@@ -119,7 +135,7 @@
       </div>
     </section>
 
-    <!-- Approach -->
+    <!-- Insights / Approach -->
     <section class="section" id="work">
       <div class="container">
         <div class="section-head reveal">
@@ -141,16 +157,10 @@
         <h2 class="section-title">Let's build something worth desiring.</h2>
         <p class="lede">Tell us about your project and we'll get back within one business day.</p>
         <form class="contact-form" id="contact-form" novalidate>
-          <div class="field">
-            <input type="text" id="name" name="name" placeholder="Your name" required />
-          </div>
-          <div class="field">
-            <input type="email" id="email" name="email" placeholder="Email address" required />
-          </div>
-          <div class="field field-full">
-            <textarea id="message" name="message" rows="3" placeholder="What are you working on?" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send message</button>
+          <div class="field"><input type="text" id="name" name="name" placeholder="Your name" required /></div>
+          <div class="field"><input type="email" id="email" name="email" placeholder="Email address" required /></div>
+          <div class="field field-full"><textarea id="message" name="message" rows="3" placeholder="What are you working on?" required></textarea></div>
+          <button type="submit" class="btn-sage btn-block">Send message</button>
           <p class="form-note" id="form-note" role="status"></p>
         </form>
       </div>
@@ -159,16 +169,17 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <a href="#top" class="brand">Desire<span class="brand-accent">Group</span></a>
+      <a href="#top" class="brand brand-footer">DESIRE GROUP</a>
       <p class="muted">© <span id="year"></span> Desire Group. All rights reserved.</p>
       <div class="footer-links">
         <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="#services">Solutions</a>
+        <a href="#contact">Get in Touch</a>
       </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
+  <script type="module" src="hero.js"></script>
 </body>
 </html>
