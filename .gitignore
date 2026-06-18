@@ -11,3 +11,7 @@ Thumbs.db
 # Dependencies (if a build is later added)
 node_modules/
 dist/
+
+# Python bytecode (from uipro skill scripts)
+__pycache__/
+*.pyc
