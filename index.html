@@ -58,6 +58,9 @@
       <h1 class="hero-title anim">Defining the<br />future of desire</h1>
 
       <div class="ring-stage anim" aria-hidden="true">
+        <!-- Interactive 3D chrome ring (Three.js) mounts here -->
+        <div id="scene3d"></div>
+        <!-- CSS fallback if WebGL / CDN is unavailable -->
         <div class="ring-tilt">
           <div class="ring"></div>
           <div class="ring-shadow"></div>
@@ -181,5 +184,6 @@
 
   <script src="script.js"></script>
   <script type="module" src="hero.js"></script>
+  <script type="module" src="interactive-3d.js"></script>
 </body>
 </html>
